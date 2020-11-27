@@ -1,0 +1,42 @@
+<main class="holder">
+        <div class="columna left">
+            <h2>Contacto Rápido</h2>
+            <form action="/contacto" method="post" class="formulario" id="formulario">
+                <p>
+                    <label for="">Nombre</label>
+                    <input type="text" required name="nombre" />
+                </p>
+                <p>
+                    <label for="">Email</label>
+                    <input type="email" required name="email" />
+                </p>
+                <p>
+                    <label for="">Telefono</label>
+                    <input type="text" required name="telefono"/>
+                </p>
+                <p>
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" required name="comentario" ></textarea>
+                </p>
+                <p class="acciones">
+                    <input type="submit" value="Enviar"/>
+                </p>
+            </form>
+            <p>{{message}}</p>
+        </div>
+        <div class="columna right">
+            <h2> Otras vias de contacto</h2>
+            <p> Tambien se pueden comunicar con nosotros...</p>
+            <ul>
+                <li>Teléfono: 4578-7894</li>
+                <li>Email:<a href="mailto:contacto@transportesx.com.ar">contacto@transportesx.com.ar</a></li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Skype</li>
+            </ul>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/validation/jquery.validate.js"></script>
+    <script src="javascripts/validation/messages_es_AR.js"></script>
+    <script src="javascripts/scripts.js"></script>

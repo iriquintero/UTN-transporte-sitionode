@@ -38,5 +38,9 @@ async function modificarNovedadById(obj,id){
         throw error;
     }
 }
+//funcion > Buscar 
+//query>select > where > like y OR
+//pasamos a novedades.js
+//volvemos hbs agregar > error
 
 module.exports = { getNovedades, insertNovedades, deleteNovedadesByID, getNovedadesById,modificarNovedadById};

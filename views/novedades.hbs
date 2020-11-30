@@ -1,5 +1,11 @@
  <main class="holder">
         <h2>Novedades</h2>
+        <div style="float:right; position:relative; bottom:40px;">
+            <form action="/novedades" method="get">
+                <input type="text" placeholder="Buscar" name="q" {{#if q}} value="{{q}} " {{/if}}>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
         {{#each novedades}}
         <div class="novedades">
             <h3>{{titulo}} </h3>
@@ -8,4 +14,9 @@
             <hr>
         </div>
         {{/each}}
+        {{#if is_search}}
+            {{#unless novedades.length}}
+                 <p>No se encontraron resultados para "<b>{{q}}</b>"</p>
+            {{/unless}}
+        {{/if}}
     </main>

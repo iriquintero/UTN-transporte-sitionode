@@ -13,7 +13,7 @@
         </div>
         <div class="col-4 text-right">
             <form action="/admin/novedades" method="get" class="form-inline">
-                <input type="search" class="form-control mr-sm-2" placeholder="Buscar" arial-label="search" name="q">
+                <input type="search" class="form-control mr-sm-2" placeholder="Buscar" arial-label="search" name="q"{{#if q}} value="{{q}} " {{/if}}>
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </form>
         </div>
@@ -38,7 +38,11 @@
                     {{/each}}
                 </tbody>
                 </table>
+                {{#if is_search}}
+                    {{#unless novedades.length}}
+                    <p>No se encontraron resultados para "<b>{{q}}</b>"</p>
+                    {{/unless}}
+                {{/if}}
         </div>
     </div>
-
 </div>
